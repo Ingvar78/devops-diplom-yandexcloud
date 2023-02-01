@@ -198,7 +198,7 @@ kube-system   nodelocaldns-bnhmf                         1/1     Running   0    
 
 ![](./img/4.0/test-app-01.png)
 
-5. [Helm Atlantis](./addition/5.0/)
+5. [Helm Atlantis](./addition/5.0/Atlantis/)
 
 ![](./img/5.0/atlantis-02.png)
 
@@ -214,11 +214,17 @@ kube-system   nodelocaldns-bnhmf                         1/1     Running   0    
 1. Автоматическая сборка docker образа при коммите в репозиторий с тестовым приложением.
 2. Автоматический деплой нового docker образа.
 
+![](./img/5.0/Jenkins-03.png)
+
+![](./img/5.0/Jenkins-04.png)
+
+![](./img/5.0/Jenkins-05.png)
+
 Можно использовать [teamcity](https://www.jetbrains.com/ru-ru/teamcity/), [jenkins](https://www.jenkins.io/) либо [gitlab ci](https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/)
 
 Ожидаемый результат:
 
-1. Интерфейс ci/cd сервиса доступен по http.
+1. Интерфейс ci/cd сервиса доступен по http. 
 2. При любом коммите в репозиторие с тестовым приложением происходит сборка и отправка в регистр Docker образа.
 3. При создании тега (например, v1.0.0) происходит сборка и отправка с соответствующим label в регистр, а также деплой соответствующего Docker образа в кластер Kubernetes.
 

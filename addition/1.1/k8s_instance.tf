@@ -62,7 +62,7 @@ resource "yandex_compute_instance" "k8s_node" {
 
   network_interface {
     subnet_id = yandex_vpc_subnet.public[count.index - floor(count.index / length(local.networks)) * length(local.networks)].id
-    nat       = false
+    nat       = true
   }
 
   scheduling_policy {
