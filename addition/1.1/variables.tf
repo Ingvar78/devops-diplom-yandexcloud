@@ -19,6 +19,12 @@ variable "yc_image_id" {
 }
 
 
+variable "yc_image_id_cicd" {
+  #centos-7
+  default = "fd8jvcoeij6u9se84dt5"
+}
+
+
 
 variable "public_key_path" {
   # Описание переменной

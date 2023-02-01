@@ -67,3 +67,48 @@ locals {
       }
     }
 }
+
+
+
+
+locals {
+  # Определяем параметры будущих хостов cicd 
+  cicd = {
+    image_id    = var.yc_image_id_cicd
+    preemptible = false
+    disk_type   = "network-hdd"
+    platform_id = "standard-v3"
+    stage = {
+      master = {
+        count         = 1
+        cpu           = 2
+        memory        = 4
+        core_fraction = 20
+        disk_size     = 20
+      }
+      agent = {
+        count         = 1
+        cpu           = 2
+        memory        = 4
+        core_fraction = 20
+        disk_size     = 20
+      }
+    }
+    prod = {
+        master = {
+          count         = 0
+          cpu           = 4
+          memory        = 4
+          core_fraction = 20
+          disk_size     = 20
+        }
+        agent = {
+          count         = 0
+          cpu           = 2
+          memory        = 2
+          core_fraction = 20
+          disk_size     = 15
+        }
+      }
+    }
+}

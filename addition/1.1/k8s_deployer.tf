@@ -1,9 +1,12 @@
 # Создаём дополнительный инстанс для настройки кластера из ЯО
 resource "yandex_compute_instance" "k8s_deployer" {
   count       = 1
-  name        = "deployer"
+#  name        = "deployer"
+  name        = "deployer-${count.index+1}"
   platform_id = local.k8s.platform_id
-  hostname    = "deployer"
+#  hostname    = "deployer
+  hostname    = "deployer-${count.index+1}"
+#  zone        = "ru-central1-a"
   zone        = local.networks[count.index - floor(count.index / length(local.networks)) * length(local.networks)].zone_name
 
   resources {
@@ -27,7 +30,7 @@ resource "yandex_compute_instance" "k8s_deployer" {
 
 //поскольку данный хост необходим только на время настройки то мы можем пренебречь его доступностью в будущем.
   scheduling_policy {
-    preemptible = true
+    preemptible = false
   }
 
   metadata = {
