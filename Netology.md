@@ -248,6 +248,8 @@ kube-system   nodelocaldns-bnhmf                         1/1     Running   0    
 
 Тестовое приложение: http://testapp.eger.pro/
 
+Доступ к Jenkins: http://84.201.173.5:8080/job/docker-repo/job/main/
+
 * для корректной работы по http-протоколу рекомендуется использовать режим Incognito Chrome, т.к. в нём не происходит принудительное переключение на https.
 
 
