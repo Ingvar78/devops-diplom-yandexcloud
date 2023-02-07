@@ -158,7 +158,7 @@ kube-system   nodelocaldns-bnhmf                         1/1     Running   0    
 
 Ожидаемый результат:
 
-1. [Git репозиторий с тестовым приложением и Dockerfile](https://github.com/Ingvar78/docker-repo/tree/main/fordocker).
+1. [Git репозиторий с тестовым приложением и Dockerfile](https://github.com/Ingvar78/docker-repo/blob/main/Dockerfile).
 2. Регистр с собранным docker image. В качестве регистра может быть DockerHub или [Yandex Container Registry](https://cloud.yandex.ru/services/container-registry), созданный также с помощью terraform.
 
 * Тестовое приложение размещённое на [DockerHUB](https://hub.docker.com/repository/docker/egerpro/nginx-app/general)
@@ -186,7 +186,7 @@ kube-system   nodelocaldns-bnhmf                         1/1     Running   0    
 Ожидаемый результат:
 1. Git репозиторий с конфигурационными файлами для настройки [Kubernetes](./addition/2.0/).
 
-2. Http доступ к web интерфейсу grafana. 
+2. Http доступ к web интерфейсу [grafana](http://grafana.eger.pro/). 
 
 ![](./img/4.0/grafana-01.png)
 
