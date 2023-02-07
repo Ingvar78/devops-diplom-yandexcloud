@@ -110,6 +110,7 @@ ansible-playbook -i inventory/mycluster/hosts.yaml cluster.yml -b -v
 kubectl get pods -n kube-system
 kubectl get nodes
 
+```
 
 iva@c9v:~/Documents/devops-diplom-yandexcloud  (2.0 *)$ kubectl get pods --all-namespaces
 NAMESPACE     NAME                                       READY   STATUS    RESTARTS   AGE
@@ -135,3 +136,4 @@ kube-system   nodelocaldns-7c4ns                         1/1     Running   0    
 kube-system   nodelocaldns-7ln6t                         1/1     Running   0          77m
 kube-system   nodelocaldns-8n7k6                         1/1     Running   0          77m
 kube-system   nodelocaldns-bnhmf                         1/1     Running   0          77m
+```
